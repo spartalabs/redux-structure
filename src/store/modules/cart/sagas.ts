@@ -5,9 +5,9 @@ import checkProductStockUseCase from '../../../useCases/CheckProductStockUseCase
 import { addProductToCartFailure, addProductToCartRequest, addProductToCartSuccess } from './actions';
 import { ActionTypes } from './types';
 
-type CheckProductStockRequet = ReturnType<typeof addProductToCartRequest>;
+type CheckProductStockRequest = ReturnType<typeof addProductToCartRequest>;
 
-function* checkProductStock(action: CheckProductStockRequet) {
+function* checkProductStock(action: CheckProductStockRequest) {
   const { product } = action.payload;
 
   try {
